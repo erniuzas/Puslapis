@@ -3,7 +3,7 @@ from models.user import db, User, UserProfile
 from forms import LoginForm, Userprofileform
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:Tarakonas009.@localhost:3306/puslapis'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://root:@localhost:3306/puslapis'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'your_secret_key_here'
 
