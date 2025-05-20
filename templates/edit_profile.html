@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Redaguoti profilį</title>
+  </head>
+  <body>
+    <h2>Fill in your informacion</h2>
+    <form method="POST">
+      {{ form.hidden_tag() }}
+      <p>{{ form.first_name.label }} {{ form.first_name() }}</p>
+      <p>{{ form.last_name.label }} {{ form.last_name() }}</p>
+      <p>{{ form.address.label }} {{ form.address() }}</p>
+      <p>{{ form.phone_number.label }} {{ form.phone_number() }}</p>
+      <p><input type="submit" value="save" /></p>
+      <p><a href="{{ url_for('user_menu') }}">Back to meniu</a></p>
+    </form>
+  </body>
+</html>

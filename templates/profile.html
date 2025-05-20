@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mano Profilis</title>
+  </head>
+  <body>
+    {% if profile %}
+
+    <h2>Hello, {{ profile.first_name }} {{ profile.last_name }}!</h2>
+    <p>Email: {{ user.email }}</p>
+    <p>Adress: {{ profile.address }}</p>
+    <p>Phone number: {{ profile.phone_number }}</p>
+    {% else %}
+    <h2>Profile not found</h2>
+    {% endif %}
+    <p><a href="/">Home page</a></p>
+    <a href="{{ url_for('edit_profile') }}">Edit Profile</a>
+  </body>
+</html>
